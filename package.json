@@ -1,0 +1,27 @@
+{
+  "name": "gside",
+  "displayName": "goboscript IDE for VSCode",
+	"description": "A goboscript IDE for VSCode with live stage and console.",
+	"publisher": "kyokyoro",
+	"version": "1.0.0",
+  "main": "./src/extension.js", 
+  "engines": { "vscode": "^1.80.0" },
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "gside.openStage",
+        "title": "goboscript: Run Project"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "gside.openStage",
+          "when": "resourceExtname == .gs",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}
